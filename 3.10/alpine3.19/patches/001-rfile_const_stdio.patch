@@ -6,12 +6,12 @@
 
 -c_stdin = rffi.CExternVariable(FILEP, 'stdin', eci, c_type='FILE*',
 +c_stdin = rffi.CExternVariable(FILEP, 'stdin', eci, c_type='FILE *const',
-                                getter_only=True)
+                                getter_only=True, declare_as_extern=False)
 -c_stdout = rffi.CExternVariable(FILEP, 'stdout', eci, c_type='FILE*',
 +c_stdout = rffi.CExternVariable(FILEP, 'stdout', eci, c_type='FILE *const',
-                                 getter_only=True)
+                                 getter_only=True, declare_as_extern=False)
 -c_stderr = rffi.CExternVariable(FILEP, 'stderr', eci, c_type='FILE*',
 +c_stderr = rffi.CExternVariable(FILEP, 'stderr', eci, c_type='FILE *const',
-                                 getter_only=True)
+                                 getter_only=True, declare_as_extern=False)
 
 

@@ -5,6 +5,6 @@
  #define Py_PYTIME_H
 
 +#include <sys/time.h>
- #include "pyconfig.h" /* include for defines */
+ #include <pyconfig.h> /* include for defines */
  #include "object.h"
 
