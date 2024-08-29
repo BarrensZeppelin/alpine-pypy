@@ -27,8 +27,8 @@ RUN apk add --no-cache --virtual .build-deps \
         zlib-dev
 
 # Download the source
-ENV PYPY_VERSION 7.3.16
-ENV PYPY_SHA256SUM 4a3a3177d0a1f51d59982bb981d1d485403bda3419d5437b9e077f55f59424ff
+ENV PYPY_VERSION 7.3.17
+ENV PYPY_SHA256SUM 6ad74bc578e9c6d3a8a1c51503313058e3c58c35df86f7485453c4be6ab24bf7
 
 RUN set -ex; \
     wget -O pypy.tar.bz2 "https://downloads.python.org/pypy/pypy3.10-v${PYPY_VERSION}-src.tar.bz2"; \
