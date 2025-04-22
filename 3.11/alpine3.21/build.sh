@@ -4,7 +4,7 @@ set -ex
 BASE_DIR="/usr/src/pypy"
 PYTHON="$(which pypy || which python)"
 
-PYPY_NAME="pypy3.10"
+PYPY_NAME="pypy3.11"
 PYPY_RELEASE_VERSION="${PYPY_RELEASE_VERSION:-$PYPY_VERSION}"
 PYPY_ARCH="linux64-alpine$(cut -d. -f1,2 /etc/alpine-release)"
 
@@ -14,7 +14,7 @@ export CFLAGS="-DTHREAD_STACK_SIZE=0x100000 $CFLAGS"
 
 # Translation
 cd "$BASE_DIR"/pypy/goal
-"$PYTHON" ../../rpython/bin/rpython --opt=jit
+"$PYTHON" ../../rpython/bin/rpython --opt=jit --no-shared
 
 # Packaging
 cd "$BASE_DIR"/pypy/tool/release
