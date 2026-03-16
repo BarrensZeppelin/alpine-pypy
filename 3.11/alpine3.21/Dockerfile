@@ -27,8 +27,8 @@ RUN apk add --no-cache --virtual .build-deps \
         zlib-dev
 
 # Download the source
-ENV PYPY_VERSION=7.3.20 \
-    PYPY_SHA256SUM=7786dda760003e2ea7409c1037e50200c578ec427ce0245ac4cd758710b206fb
+ENV PYPY_VERSION=7.3.21 \
+    PYPY_SHA256SUM=e7c9d8236ef279dba51abb9e691401a6c805bbe3250c6842dc9bac98f8de688a
 
 RUN set -ex; \
     wget -O pypy.tar.bz2 "https://downloads.python.org/pypy/pypy3.11-v${PYPY_VERSION}-src.tar.bz2"; \
